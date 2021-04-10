@@ -1,0 +1,21 @@
+Consider the following CSV file "Concrete_Data.csv". This file contains the results of compressive tests for various types of concrete.
+
+1. Load the CSV data into a pandas data frame. Print some high-level statistical info about the data frame's columns.
+
+2. How many rows have a compressive strength > 40 MPa?
+
+3. Plot the histogram of Coarse Aggregate and Fine Aggregate values
+
+4. Make a plot comparing compressive strength to age
+
+5. Make a plot comparing compressive strength to age for only those rows with < 750 fine aggregate.
+
+6. Try to build a linear model that predicts compressive strength given the other available fields.
+
+7. Generate predictions for all the observations and a scatterplot comparing the predicted compressive strengths to the actual values.
+
+You should submit two UNCOMPRESSED files: 1) a Jupyter notebook in word or in a pdf file where you answer the above questions and report on your simulations, and 2) the Python code file as an independent file (.py).
+
+From your Jupyter notebook, you can download the two files selecting: File --> Download as: 1) (select HTML or PDF) and 2) Python (.py). 
+
+If you want to improve your homework, you can resubmit it until the deadline.

@@ -1,0 +1,34 @@
+Data imputation and forecast: The main objective is to substitute null values with imputed values. 
+
+Download the dataset credit-data-post-import.csv, randomly split your dataset into two datasets: training (75% observations) and testing (25% observations). We'll use the training set to calibrate our model and to impute missing values. The test set will help us to evaluate how effective the model is.
+
+Split our training data into 2 groups: data containing nulls and data not containing nulls on the monthly_income variable. Train on the latter and make 'predictions' on the null data to impute monthly_income using a regression algorithm with the variables 'number_real_estate_loans_or_lines' and 'number_of_open_credit_lines_and_loans'.
+
+Select the test data containing null values and using the model trained above, impute monthly income for these observations.
+
+For the training and test datasets, substitute the observations containing nulls on the monthly_income variable with the imputed values. After this imputation process, both the training and test datasets should not contain null values on the monthly_income variable. Save these datasets as credit-data-trainingset.csv and credit-data-testset.csv.
+
+For this first part, the report can compare the number of observations of each dataset (train and test) before and after the correction of null values to demonstrate that the imputation process worked well.
+
+Credit risk:
+In this second part of this exercise, you must determine whether you will give a loan to a client based on his/her default history using the variable serious_dlqin2yrs (serious delinquency rate 2years: 1 defaults, 0 otherwise). serious_dlqin2yrs is the target or dependent variable that you must predict.
+
+Using only the credit-data-trainingset.csv data, you must compare the accuracy of the following algorithms using cross-validation (cross_val_score) and select the algorithm with the highest accuracy (you can use the default values of the sklearn functions):
+
+- Logistic regression (sklearn.linear_model.LogisticRegression) using penalty (regularization) L2 
+- Any version of decision trees 
+- SVM using penalty (regularization) L2 (Note: sklearn.svm.SVC uses the L2 penalty and has the predict_proba function)
+- Adaboost
+
+Build the ROC (include the area under the ROC curve), the cumulative response and lift curves for the algorithms mentioned above.
+
+Use the best model from above and select the best parameters of this algorithm using grid search (GridSearchCV).
+
+Train your best model with the best parameters using the training dataset (credit-data-trainingset.csv).
+
+Test your model with the best parameters using the test dataset (credit-data-testset.csv) and show its accuracy.
+
+
+
+You should submit two UNCOMPRESSED files: a report and a Python program organized by questions. You can also submit a report as a Jupyter notebook saved as an HTML or pdf file. However, you must still submit the Python code file as an independent file.
+
